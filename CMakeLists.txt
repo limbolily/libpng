@@ -82,7 +82,7 @@ yong_option(PNGARG            "Disable ANSI-C prototypes" NO)
 set(PNG_LIB_NAME png${PNGLIB_MAJOR}${PNGLIB_MINOR})
 
 # to distinguish between debug and release lib
-set(CMAKE_DEBUG_POSTFIX "d")
+#set(CMAKE_DEBUG_POSTFIX "d")
 
 # Use the prebuilt pnglibconf.h file from the scripts folder
 # TODO: fix this by building with awk; without this no cmake build can be
@@ -131,9 +131,9 @@ set(pngstest_sources
 )
 # SOME NEEDED DEFINITIONS
 
-#if(MSVC)
-#  add_definitions(-D_CRT_SECURE_NO_DEPRECATE)
-#endif(MSVC)
+if(MSVC)
+  add_definitions(-D_CRT_SECURE_NO_DEPRECATE)
+endif(MSVC)
 
 if(PNG_DEBUG)
   add_definitions(-DPNG_DEBUG)
