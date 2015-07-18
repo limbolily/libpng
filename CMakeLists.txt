@@ -131,9 +131,9 @@ set(pngstest_sources
 )
 # SOME NEEDED DEFINITIONS
 
-if(MSVC)
-  add_definitions(-D_CRT_SECURE_NO_DEPRECATE)
-endif(MSVC)
+#if(MSVC)
+#  add_definitions(-D_CRT_SECURE_NO_DEPRECATE)
+#endif(MSVC)
 
 if(PNG_DEBUG)
   add_definitions(-DPNG_DEBUG)
